@@ -18,6 +18,8 @@ language_translator.set_service_url('https://api.eu-gb.language-translator.watso
 
 #This function translates English to French 
 def english_to_french(english_text):
+############################################
+# if IsNone .... return None, in unit - testing test for assertIsNone
     try:
     # Invoke a method
         english_translation = language_translator.translate(text=english_text,model_id='en-fr').get_result()
